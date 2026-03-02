@@ -18,12 +18,15 @@ function calculateStress() {
     if(total <= 12){
         resultText = "Low Stress";
         tips = "Great Job! You seem to be managing well. Keep maintaining your work-life balance and stay active.";
+        document.getElementById("result").style.color = "green";
     } else if(total <= 20){
         resultText = "Moderate Stress";
         tips = "You're feeling some pressure. Try to prioritize your tasks, take short breaks every hour, and ensure you're getting enough sleep.";
+        document.getElementById("result").style.color = "orange";
     } else {
         resultText = "High Stress";
         tips = "It sounds like you're overwhelmed. Consider talking to a mentor, practicing deep breathing exercises, or breaking your big projects into tiny, managable steps.";
+        document.getElementById("result").style.color = "red";
     }
 
     document.getElementById("result").innerText = "Your Score:" + total + "->" + resultText;
