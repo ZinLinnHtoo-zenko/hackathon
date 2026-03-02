@@ -1,0 +1,13 @@
+nav {
+    border: 2px solid black;
+}
+
+ul {
+    text-align: end;
+}
+
+li {
+    display: inline-block;
+    margin: 20px;
+    font-size: 2rem;
+}
