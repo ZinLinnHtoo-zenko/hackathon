@@ -9,6 +9,20 @@ function calculateStress() {
             return;
         }
 
-        total += parselnt(answer.value);
+        total += parseInt(answer.value);
     }
+
+    let resultText = "";
+
+    if(total <= 12){
+        resultText = "Low Stress";
+    } else if(total <= 20){
+        resultText = "Moderate Stress";
+    } else {
+        resultText = "High Stress";
+    }
+
+    document.getElementById("result").innerText = "Your Score:" + total + "->" + resultText;
+
+    localStorage.setItem("Last Score", total);
 }
